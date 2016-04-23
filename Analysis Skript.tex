@@ -1,8 +1,12 @@
-\documentclass{report}
+\documentclass[a4paper,10pt]{report}
+
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
-\usepackage[utf8]{inputenc} 
+\usepackage[a4paper,inner=3.5cm,outer=2.5cm]{geometry}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{mathtools}
 \usepackage{floatrow}
@@ -29,8 +33,47 @@
 \title{Analysis}
 \author{Martin Schmidli}
 
+
 \begin{document}
-\maketitle
+\pagestyle{empty} %Keine Kopf-/Fusszeilen auf den ersten Seiten.
+\begin{titlepage}
+\begin{center}
+
+% Oberer Teil der Titelseite:
+\includegraphics[width=0.08\textwidth]{images/bfh_logo.png}\\[1cm]    
+\textsc{\LARGE Bern University of Applied Sciences}\\[1.5cm]
+
+% Title
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+\HRule \\[1cm]
+{\huge \bfseries Analysis }\\[0.7cm]
+\HRule \\[1.5cm]
+
+% Author und Lehrer
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Authoren:}\\
+Martin \textsc{Schmidli}\\
+\end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Dozent:} \\
+Rolf \textsc{Müller}
+\end{flushright}
+\end{minipage}
+\vfill
+
+% Unterer Teil der Seite
+Bern, {\large \today}
+\end{center}
+\end{titlepage}
+\pagestyle {plain}
+
+\tableofcontents
+\newpage
+
 \chapter{Folgen und Grenzen}
 \section{Definition von Folgen}
 Betrachten wir Zahlenfolgen wie
@@ -1556,7 +1599,7 @@ Alsi ist
  	F &=& \frac{b^3}{3}
  \end{eqnarray*}
  deshalb schreiben wir
- \begin{equation*}\boxed{\int_0^b x^2dx= \frac{b^3}{3}}\quad \quad \mbox{"Integral von 0 bis b"}\end{equation*}
+ \begin{equation*}\boxed{\int_0^b x^2dx= \frac{b^3}{3}}\quad \quad \mbox{"`Integral von 0 bis b''`}\end{equation*}
  welches wir ein \underline{bestimmtes Integral} mit der \\
  \begin{center}
  	unteren Grenze 0\\
